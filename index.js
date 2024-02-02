@@ -146,7 +146,6 @@ function addADepartment() {
         [res.department], 
         function(err, data) {
             if (err) throw err;
-            console.table("Successfully Inserted");
 
         })
     })
@@ -170,8 +169,7 @@ function addARole() {
     ])
         .then(function (response) {
         connection.query("INSERT INTO roles (title, salary, department_id) values (?, ?, ?)", 
-        [response.title, response.salary, response.department_id], function (err, data) {
-            console.table(data);
+        [response.title, response.salary, response.department_id], function (err, data) {if (err) throw err;
         })
 
     })
@@ -191,7 +189,7 @@ function updateAnEmployeeRole() {
     ]).then(function (response) {
         connection.query("UPDATE employee SET role_id = ? WHERE first_name = ?", 
         [response.role_id, response.name], function (err, data) {
-            console.table(data);
+          if (err) throw err;
         })
 
     })
