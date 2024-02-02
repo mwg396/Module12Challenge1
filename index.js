@@ -137,9 +137,11 @@ function addAnEmployee() {
 function addADepartment() {
     inquirer.prompt([{
         type: "input",
-        name: "addDepartment",
+        name: "addADepartment",
         message: "What is the department that you want to add?"
-    }, ]).then(function(res) {
+    },
+    ])
+        .then(function(res) {
         connection.query('INSERT INTO department (name) VALUES (?)', 
         [res.department], 
         function(err, data) {
@@ -165,7 +167,8 @@ function addARole() {
             type: "number",
             name: "department_id"
         }
-    ]).then(function (response) {
+    ])
+        .then(function (response) {
         connection.query("INSERT INTO roles (title, salary, department_id) values (?, ?, ?)", 
         [response.title, response.salary, response.department_id], function (err, data) {
             console.table(data);
