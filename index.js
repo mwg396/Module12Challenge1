@@ -169,7 +169,8 @@ function addARole() {
     ])
         .then(function (response) {
         connection.query("INSERT INTO roles (title, salary, department_id) values (?, ?, ?)", 
-        [response.title, response.salary, response.department_id], function (err, data) {if (err) throw err;
+        [response.title, response.salary, response.department_id], function (err, data) {
+            if (err) throw err;
         })
 
     })
