@@ -14,6 +14,7 @@ git pull onto local system
 Run command line terminal and first install all dependencies by running following lines into terminal
   npm i 
   npm i inquirer
+  Enter mysql shell and SOURCE schema and seed sql files
 Run node index.js in terminal
 Answer prompts
 
