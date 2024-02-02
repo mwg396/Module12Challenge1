@@ -17,5 +17,5 @@ Run command line terminal and first install all dependencies by running followin
 Run node index.js in terminal
 Answer prompts
 
-Credits
+##Credits
 I used the assitance of a tutor provided by EdX in order to work on the index.js prompts and the schema and seeds sql's. He helped to explain the main overview of how to write inquirer prompts and aided in troubleshooting sql errors.
